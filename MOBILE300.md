@@ -23,7 +23,7 @@ sonra res/raw klasörü içerisindeki sertifikanın içeriğini kullandığımı
 Uygulamamızı tekrar compile ettikten sonra proxy yazılımımız ile http requestlerini izleyebilir duruma geldik.
 
 
-# Requestler
+#     Requestler
 
 Uygulamadan 2 farklı request gidiyordu
 
@@ -47,12 +47,12 @@ blackboxın md5'ini alıp yollamayı denedik.
 
 sonuç hüsran
 
-Daha sonra login.phpde uservalue'yu farkettik
+Daha sonra login.phpde UserValue'yu farkettik
 
 
 ![Alt text](https://i.hizliresim.com/4aMJmY.png)
 
-Uygulama login.phpden sonra serverdan herhangi bi veri istediğinde bulunmuyordu.
+Uygulama login.php'den sonra serverdan herhangi bi veri istediğinde bulunmuyordu.
 IDORumsu bi zafiyet kısaca.
 
 uygulamayı incelemek için jdax kullandık.
@@ -60,7 +60,7 @@ uygulamayı incelemek için jdax kullandık.
 
 ![Alt text](https://i.hizliresim.com/1JgAyp.png)
 
-Uygulama uservalue'yu md5(BUILD_NOclubber+mail+token) şeklinde oluşturuyordu.
+Uygulama uservalue'yu md5("BUILD_NOclubber"+mail+token) şeklinde oluşturuyordu.
 
 Maili biliyorduk tokenında md5(blackbox) olcağını tahmin ediyorduk.Geriye hepsini birleştirip md5ini hesaplamak kalıyordu
 
@@ -71,3 +71,5 @@ hesapladıktan sonra get_ticket.php ye göndericeğimiz isteği değiştirdik.
 
 
 ![Alt text](https://i.hizliresim.com/A1kl2Q.png)
+
+ve sonuda bayrağa ulaştık.
