@@ -1,3 +1,9 @@
+# STM CTF'18 WRITEUP
+
+Soruların bir kısmının writeup'ı aşağıda mavcut, sorulan soruların tamamı Gitlab'a yüklendi. 
+[Buradan soruların tümünü burada bulabilirsiniz.](https://gitlab.com/berkayyildiz/stm-ctf-18)
+
+
 
 # Crypto-RSA POOL
 
