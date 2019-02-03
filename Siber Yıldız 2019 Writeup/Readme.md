@@ -1,6 +1,6 @@
 # Siber Yıldız 2019 Writeup
 
-## network-150.pcap 
+## HTTPS Network Pcap
 
 [Pcap Dosyası](network-150.pcap)
 
@@ -22,4 +22,20 @@ satırından parola bilgisini alıyor http://www.ifm.net.nz/cookbooks/passwordcr
     flag:md5(r0uterP@ss)
 Sonra md5 alıp bayrağı kapıyoruz.
 
-## network-150.pcap 
+## Bluetooth Pcap
+[Pcap Dosyası](usom1.pcap)
+Bir bluetooth pcap dosyası olduğunu farkediyoruz bir dosya gönderildiğini anlıyor başta giden byte'ları tek tek analiz edip PNG magic byte tan sonra kopyalayarak image render etmeye çalıştım fakat sonra çok daha kolay bir yöntem olduğunu farkettim.
+![enter image description here](bluetooth.png)
+Filter kısmına OBEX yazdıktan sonra 156 nolu paketten Portable Network Graphics kısmından export alarak bayrağımızı alabiliyoruz.
+
+## HASH
+
+0827206450376af3dce61d788ddeba21f58dba35257fdb43c1872c096a36287f
+
+Soruyu açtığımızda sadece yukarıdaki hash'i görüyoruz. Hash i google da arattığımda hiç bir şey yok sonra bunun virustotal hash i olabildiğini düşünüp kontrol ettiğimde dosyaya ulaşıyorum. Dosya ve parolası da community kısmında paylaşılmış dosya bir apk dosyası. [Apk Dosyası](puzzles.apk)
+Dosya boyutunun büyük olması şüphe uyandırıyor kodları kontrol etmekle zaman kaybetsem de drawable/ klasörünün altındaki resimleri buluyorum. [Resimler](resim.rar)
+Dosyalara binwalk ile baktığımızda hepsi .zip içeriyor tek tek hepsini çıkarttıktan sonra sha1sum ile farklı olan zip dosyasını tespit edip açmayı deniyoruz ama parola korumalı olduğundan açamıyoruz bruteforce denemesi yapıyorum fakat sonuç alamıyorum. Sonra takım arkadaşımın exiftool da parolayı yakalamasının ardından
+![enter image description here](sair.png)
+    =?ufh]5%T7R2mGvQU?<n
+
+ dosyamız içerisinden hadibul.b64 dosyasını dosya uzantısından base64 encoded olduğunu tahmin edip CyberChef ten decode ediyoruz dosyamızı file komutuyla incelediğimizde apk dosyası olduğunu keşfedip apk yı telefonumuza yüklüyoruz java kodunu anlayıp butona 5 kere tıklayarak bayrağı alıyoruz.
