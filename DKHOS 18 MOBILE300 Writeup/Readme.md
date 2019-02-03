@@ -14,11 +14,11 @@ Uygulamanın gönderdiği requestleri tam olarak görüntüleyebilmek ve manipü
 
 Uygulamayı Apk Easy Tool ile decompile ettik.
 
-![Alt text](https://i.hizliresim.com/0EB5o9.png)
+![Alt text](Unpin-1.png)
 
 sonra res/raw klasörü içerisindeki sertifikanın içeriğini kullandığımız proxy yazılımının oluşturduğu CA sertifikasıyla değiştirip
 
-![Alt text](https://i.hizliresim.com/3Eq4Z4.png)
+![Alt text](Unpin-2.png)
 
 Uygulamamızı tekrar compile ettikten sonra proxy yazılımımız ile http requestlerini izleyebilir duruma geldik.
 
@@ -28,29 +28,29 @@ Uygulamamızı tekrar compile ettikten sonra proxy yazılımımız ile http requ
 Uygulamadan 2 farklı request gidiyordu
 
 login.php
-![Alt text](https://i.hizliresim.com/0EB5VV.png)
+![Alt text](Burp-1.png)
 
 
 ve get_ticket.php
 
-![Alt text](https://i.hizliresim.com/rO2bjM.png)
+![Alt text](Burp-2.png)
 
 login.phpnin response'ndan aldığımız md5 hashini decrypt ettik
 
-![Alt text](https://i.hizliresim.com/YgNGkZ.png)
+![Alt text](whitebox.png)
 
 hemen aklımıza tam zıttı olan blackbox geldi
 
 blackboxın md5'ini alıp yollamayı denedik.
 
-![Alt text](https://i.hizliresim.com/azGZyR.png)
+![Alt text](burp-user.png)
 
 sonuç hüsran
 
 Daha sonra login.phpde UserValue'yu farkettik
 
 
-![Alt text](https://i.hizliresim.com/4aMJmY.png)
+![Alt text](burp-ticket.png)
 
 Uygulama login.php'den sonra serverdan herhangi bi veri istediğinde bulunmuyordu.
 IDORumsu bi zafiyet kısaca.
@@ -58,18 +58,18 @@ IDORumsu bi zafiyet kısaca.
 uygulamayı incelemek için jdax kullandık.
 
 
-![Alt text](https://i.hizliresim.com/1JgAyp.png)
+![Alt text](jadx.png)
 
 Uygulama uservalue'yu md5("BUILD_NOclubber"+mail+token) şeklinde oluşturuyordu.
 
 Maili biliyorduk tokenında md5(blackbox) olcağını tahmin ediyorduk.Geriye hepsini birleştirip md5ini hesaplamak kalıyordu
 
 
-![Alt text](https://i.hizliresim.com/OoLX23.png)
+![Alt text](token.png)
 
 hesapladıktan sonra get_ticket.php ye göndericeğimiz isteği değiştirdik.
 
 
-![Alt text](https://i.hizliresim.com/A1kl2Q.png)
+![Alt text](flag.png)
 
 ve sonuda bayrağa ulaştık.
