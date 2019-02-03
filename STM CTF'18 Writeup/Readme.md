@@ -42,7 +42,7 @@ c0643660a330b1bbfd1717baaf554d2e
 
 # Misc-Stmlogo
 Exiftool ile direkt bayrağı alabiliyoruz.
-![enter image description here](http://i.hizliresim.com/JDmX4Y.png)
+![enter image description here](Misc-Stmlogo.png)
 
 1ede93697ab69188a8d55552387b13be
 
