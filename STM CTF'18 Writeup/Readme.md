@@ -74,20 +74,20 @@ STMCTF{JS-js_JS-alert(1);¯\(-_-)/¯}
 
 # Forensic-Örümcek Analiz
 Verilen dosyayı mount etmek için Mount Image Pro 6.42 aracını kullanıyoruz. Burada mount ederken gizli dosyaları da görebilmek için hepsini aşağıdaki gibi işaretliyoruz.
-![enter image description here](http://i.hizliresim.com/Orumcek-1.png)
+![enter image description here](Orumcek-1.png)
 Masaüstündeki flag adlı dosya dikkatimizi çekiyor cat komutuyla baktığımızda dosyayın AES Crypt Encryped Data File olduğunu görüyoruz bu yazılımı bilgisayara kurup çıkartmaya çalıştığımızda tabiki parola soruyor.
-![enter image description here](http://i.hizliresim.com/Orumcek-2.png)
+![enter image description here](Orumcek-2.png)
 Parolayı bulabilmek için biraz daha arama yapıyoruz ve recycle.bin içerisinde dosyalar dikakt çekiyor.
-![enter image description here](http://i.hizliresim.com/Orumcek-3.png)
+![enter image description here](Orumcek-3.png)
 Dosyaya baktığımızda parolayla karşılaşıyoruz.
-![enter image description here](http://i.hizliresim.com/Orumcek-4.png)
+![enter image description here](Orumcek-4.png)
 PDF dosyasını decrypt edip açtığımızda bayrağı görüyoruz.
-![enter image description here](http://i.hizliresim.com/Orumcek-5.png)
+![enter image description here](Orumcek-5.png)
 
 # Forensic-Parola olmuş Flag
 Soruda söylenenden parolanın form a yazıldığını ve tarayıcının bunu kaydettiğini tahmin ediyoruz.
 Mount Image Pro ile dosyayı mount ediyoruz.
-![enter image description here](http://i.hizliresim.com/Firefox-1.png)
+![enter image description here](Firefox-1.png)
 Ardından makinada Firefox yüklü olduğunu görüyoruz.
 Passwordfox yazılımı ile ayarlardan mount ettiğimiz bölümde bulunan Firefox profilinin ve Firefox yazılımının yolunu gösterdiğimizde bayrağı görebiliyoruz.
-![enter image description here](http://i.hizliresim.com/Firefox-2.png)
+![enter image description here](Firefox-2.png)
