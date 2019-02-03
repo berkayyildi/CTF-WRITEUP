@@ -48,7 +48,7 @@ Exiftool ile direkt bayrağı alabiliyoruz.
 
 # Mobile-KolaySoruYahu
 Apk dosyasının içerisindeki native kütüphane içerisinde ida pro ile aram yaptığımızda bayrağa ulaşabiliyoruz.
-![enter image description here](http://i.hizliresim.com/X6myJk.png)
+![enter image description here](Mobile-KolaySoruYahu.png)
 
 STMCTF{3fendim_her_muhitte_her_espri_zann1mca_yap1lmaz}
 
@@ -74,20 +74,20 @@ STMCTF{JS-js_JS-alert(1);¯\(-_-)/¯}
 
 # Forensic-Örümcek Analiz
 Verilen dosyayı mount etmek için Mount Image Pro 6.42 aracını kullanıyoruz. Burada mount ederken gizli dosyaları da görebilmek için hepsini aşağıdaki gibi işaretliyoruz.
-![enter image description here](http://i.hizliresim.com/6NdQP0.png)
+![enter image description here](http://i.hizliresim.com/Orumcek-1.png)
 Masaüstündeki flag adlı dosya dikkatimizi çekiyor cat komutuyla baktığımızda dosyayın AES Crypt Encryped Data File olduğunu görüyoruz bu yazılımı bilgisayara kurup çıkartmaya çalıştığımızda tabiki parola soruyor.
-![enter image description here](http://i.hizliresim.com/WDm4km.png)
+![enter image description here](http://i.hizliresim.com/Orumcek-2.png)
 Parolayı bulabilmek için biraz daha arama yapıyoruz ve recycle.bin içerisinde dosyalar dikakt çekiyor.
-![enter image description here](http://i.hizliresim.com/k6mABq.png)
+![enter image description here](http://i.hizliresim.com/Orumcek-3.png)
 Dosyaya baktığımızda parolayla karşılaşıyoruz.
-![enter image description here](http://i.hizliresim.com/RD2Xk7.png)
+![enter image description here](http://i.hizliresim.com/Orumcek-4.png)
 PDF dosyasını decrypt edip açtığımızda bayrağı görüyoruz.
-![enter image description here](http://i.hizliresim.com/3zQNL0.png)
+![enter image description here](http://i.hizliresim.com/Orumcek-5.png)
 
 # Forensic-Parola olmuş Flag
 Soruda söylenenden parolanın form a yazıldığını ve tarayıcının bunu kaydettiğini tahmin ediyoruz.
 Mount Image Pro ile dosyayı mount ediyoruz.
-![enter image description here](http://i.hizliresim.com/qvV3bq.png)
+![enter image description here](http://i.hizliresim.com/Firefox-1.png)
 Ardından makinada Firefox yüklü olduğunu görüyoruz.
 Passwordfox yazılımı ile ayarlardan mount ettiğimiz bölümde bulunan Firefox profilinin ve Firefox yazılımının yolunu gösterdiğimizde bayrağı görebiliyoruz.
-![enter image description here](http://i.hizliresim.com/MDmX09.png)
+![enter image description here](http://i.hizliresim.com/Firefox-2.png)
