@@ -42,13 +42,13 @@ c0643660a330b1bbfd1717baaf554d2e
 
 # Misc-Stmlogo
 Exiftool ile direkt bayrağı alabiliyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Misc-Stmlogo.png)
+![enter image description here](STM%20CTF'18%20Writeup/Misc-Stmlogo.png)
 
 1ede93697ab69188a8d55552387b13be
 
 # Mobile-KolaySoruYahu
 Apk dosyasının içerisindeki native kütüphane içerisinde ida pro ile aram yaptığımızda bayrağa ulaşabiliyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Mobile-KolaySoruYahu.png)
+![enter image description here](STM%20CTF'18%20Writeup/Mobile-KolaySoruYahu.png)
 
 STMCTF{3fendim_her_muhitte_her_espri_zann1mca_yap1lmaz}
 
@@ -74,20 +74,20 @@ STMCTF{JS-js_JS-alert(1);¯\(-_-)/¯}
 
 # Forensic-Örümcek Analiz
 Verilen dosyayı mount etmek için Mount Image Pro 6.42 aracını kullanıyoruz. Burada mount ederken gizli dosyaları da görebilmek için hepsini aşağıdaki gibi işaretliyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Orumcek-1.png)
+![enter image description here](STM%20CTF'18%20Writeup/Orumcek-1.png)
 Masaüstündeki flag adlı dosya dikkatimizi çekiyor cat komutuyla baktığımızda dosyayın AES Crypt Encryped Data File olduğunu görüyoruz bu yazılımı bilgisayara kurup çıkartmaya çalıştığımızda tabiki parola soruyor.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Orumcek-2.png)
+![enter image description here](STM%20CTF'18%20Writeup/Orumcek-2.png)
 Parolayı bulabilmek için biraz daha arama yapıyoruz ve recycle.bin içerisinde dosyalar dikakt çekiyor.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Orumcek-3.png)
+![enter image description here](STM%20CTF'18%20Writeup/Orumcek-3.png)
 Dosyaya baktığımızda parolayla karşılaşıyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Orumcek-4.png)
+![enter image description here](STM%20CTF'18%20Writeup/Orumcek-4.png)
 PDF dosyasını decrypt edip açtığımızda bayrağı görüyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Orumcek-5.png)
+![enter image description here](STM%20CTF'18%20Writeup/Orumcek-5.png)
 
 # Forensic-Parola olmuş Flag
 Soruda söylenenden parolanın form a yazıldığını ve tarayıcının bunu kaydettiğini tahmin ediyoruz.
 Mount Image Pro ile dosyayı mount ediyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Firefox-1.png)
+![enter image description here](STM%20CTF'18%20Writeup/Firefox-1.png)
 Ardından makinada Firefox yüklü olduğunu görüyoruz.
 Passwordfox yazılımı ile ayarlardan mount ettiğimiz bölümde bulunan Firefox profilinin ve Firefox yazılımının yolunu gösterdiğimizde bayrağı görebiliyoruz.
-![enter image description here](DKHOS 18 MOBILE300 Writeup/Firefox-2.png)
+![enter image description here](STM%20CTF'18%20Writeup/Firefox-2.png)
